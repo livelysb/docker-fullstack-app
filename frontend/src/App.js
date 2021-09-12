@@ -50,7 +50,7 @@ function App() {
             <input
               type="text"
               placeholder="입력해주세요."
-              onChange={changeHagitndler}
+              onChange={changeHandler}
               value={value}
             />
             <button type="submit">확인</button>
