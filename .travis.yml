@@ -6,7 +6,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t livelysb/react-test-app -f ./forntend/Dockerfile.dev ./forntend
+  - docker build -t livelysb/react-test-app -f ./frontend/Dockerfile.dev ./forntend
 
 script:
   - docker run -e CI=true livelysb/react-test-app npm run test
@@ -16,7 +16,7 @@ after_success:
   - docker build -t livelysb/docker-backend ./backend
   - docker build -t livelysb/docker-nginx ./nginx
 
-  - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
+  - echo "$orntend/D" | docker login -u "$DOCKER_HUB_ID" --password-stdin
 
   - docker push livelysb/docker-frontend
   - docker push livelysb/docker-backend
