@@ -16,7 +16,7 @@ after_success:
   - docker build -t livelysb/docker-backend ./backend
   - docker build -t livelysb/docker-nginx ./nginx
 
-  - echo "$orntend/D" | docker login -u "$DOCKER_HUB_ID" --password-stdin
+  - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
 
   - docker push livelysb/docker-frontend
   - docker push livelysb/docker-backend
