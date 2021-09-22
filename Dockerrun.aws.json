@@ -18,7 +18,7 @@
         {
             "name": "nginx",
             "image": "livelysb/docker-nginx",
-            "hostname": "frontend",
+            "hostname": "nginx",
             "essential": true,
             "portMappings": [
                 {
